@@ -1,3 +1,54 @@
+############################################ INITIAL SET UP ################################################################
+
+1. In Hyper Terminal, cd into the desired folder (e.g. ..\Projects) and type: npx create-react-app eCommerce   
+Note: eCommerce is the name of the new project
+This will create a new React app and install the necessary starter packages
+
+2. cd into the new project folder to see the contents. There are items that won't be required so let's clean them up
+- In src/index.js, remove the lines of code related to serviceWorker   
+- In src/App.js, remove contents inside of <div>. Also remove the className. Remove the import logo as well
+- In src/App.css, remove all contents in the css file
+
+
+############################################ HOME PAGE SET UP ################################################################
+
+3. Create a new component homepage.component.jsx in the src folder (note: if syntax highlighting is not shown, install the language-babel package).
+import React from 'react' then
+create a function to render the structure of the homepage with a <div> container for the homepage, a <div> container for the directory-menu, a <div> container for the menu-item, and a <div> container for the content. Include a <h1> title and <span> subtitle. It should look something as follows:
+
+const HomePage = () => (
+  <div className='homepage'>
+    <div className='directory-menu'>
+      <div className='menu-item'>
+        <div className='content'>
+          <h1 className='title'>HATS</h1>
+          <span className='subtitle'>SHOP NOW</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  );
+
+Repeat for menu-items for SNEAKERS, JACKETS, WOMENS, MENS.
+export default HomePage
+
+4. In App.js import HomePage from './homepage.component'
+Inside the <div>, render <HomePage />
+
+5. In Hyper terminal, type: npm start
+This runs the app in development mode. Check to ensure that the HomePage component is rendered properly
+
+6. In Hyper terminal, type: npm install -g sass
+This installs the sass package, which is a professional grade css extension language
+npm install node-sass
+
+7. Create a new sass file homepage.styles.scss to start styling the homepage.
+Add import './homepage.styles.scss' in the homepage.component.jsx file
+Run npm start to make sure the styles are rendered properly
+
+
+#######################################################################################################################
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
